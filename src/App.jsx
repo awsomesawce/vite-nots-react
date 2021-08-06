@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
-import { readdirSync,
-         readFileSync,
-         existsSync } from 'fs'
+import fs from 'fs'
 import './App.css'
 
+
 const newFunc = (dir) => {
-  if (existsSync(dir)) {
-    console.log(readdirSync(dir))
+  if (fs.existsSync(dir)) {
+    console.log(fs.readdirSync(dir))
   }
 }
 
